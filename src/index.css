@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background:#ffffff;     
+  --bg-soft: #eceeee;      
+  --primary: #5d5f5d;         
+  --cta: #f1c07c;             
+   --dark: #1E293B;            
+  --muted: #777779;           
+  --color-ivory: #ffffff;     
+  --color-pale-oak: #F8FAFC;  
+  --color-dark: #0F172A;
+  --font-heading: "Quicksand", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px -5px rgba(91, 92, 92, 0.2);
+  }
+
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+}
